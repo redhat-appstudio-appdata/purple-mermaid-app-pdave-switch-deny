@@ -1,4 +1,5 @@
 bases:
+- components/1-java-springboot/base
 - components/1-nodejs/base
 resources:
 - common-storage-pvc.yaml
