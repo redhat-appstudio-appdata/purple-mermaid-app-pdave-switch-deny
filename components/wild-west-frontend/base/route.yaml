@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: wild-west-frontend
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: wild-west-frontend
+    app.kubernetes.io/part-of: purple-mermaid-app
+  name: wild-west-frontend
+  namespace: pdave
+spec:
+  port:
+    targetPort: 3000
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: wild-west-frontend
+    weight: 100
+status: {}

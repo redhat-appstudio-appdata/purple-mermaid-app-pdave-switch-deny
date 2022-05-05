@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: wild-west-frontend
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: wild-west-frontend
+    app.kubernetes.io/part-of: purple-mermaid-app
+  name: wild-west-frontend
+  namespace: pdave
+spec:
+  ports:
+  - port: 3000
+    targetPort: 3000
+  selector:
+    app.kubernetes.io/instance: wild-west-frontend
+status:
+  loadBalancer: {}

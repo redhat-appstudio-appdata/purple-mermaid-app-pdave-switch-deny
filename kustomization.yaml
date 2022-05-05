@@ -1,5 +1,6 @@
 bases:
 - components/1-java-springboot/base
 - components/1-nodejs/base
+- components/wild-west-frontend/base
 resources:
 - common-storage-pvc.yaml
